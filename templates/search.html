@@ -1,0 +1,69 @@
+{% extends "layout.html" %}
+
+{% block main %}
+{% if error_msg %}
+<header>
+    <div class="alert alert-primary border text-center" role="alert">
+        ⚠ ERROR: {{ error_msg }} ⚠
+    </div>
+</header>
+{% endif %}
+<p>
+    Find the resource that's right for you by selecting the appropriate filters below.
+    You can select as many or as few as you'd like; no need to select from every category.
+</p>
+<br>
+<form action="/search" method="post">
+    <table style="width:100%" id="t01">
+        <col style="width:20%">
+        <col style="width:80%">
+        <tr>
+            <th class="searchhead1"><b>Run by: </b></th>
+            <td>
+                <input type="checkbox" name="tags" value="faculty">Harvard Faculty or Staff</input> &nbsp;
+                <input type="checkbox" name="tags" value="students">Students</input> &nbsp;
+                <input type="checkbox" name="tags" value="other">Other</input>
+            </td>
+        </tr>
+        <tr>
+            <th class="searchhead2"><b>Type of Resource: </b></th>
+            <td>
+                <input type="checkbox" name="tags" value="advising">Advising</input> &nbsp;
+                <input type="checkbox" name="tags" value="counseling">Counseling</input> &nbsp;
+                <input type="checkbox" name="tags" value="health">Health</input> &nbsp;
+                <input type="checkbox" name="tags" value="info">Information</input> &nbsp;
+                <input type="checkbox" name="tags" value="tutoring">Tutoring and Academic</input>
+            </td>
+        </tr>
+        <tr>
+            <th  class="searchhead3"><b>Target Group: </b></th>
+            <td>
+                <input type="checkbox" name="tags" value="blgtq">BLGTQ</input> &nbsp;
+                <input type="checkbox" name="tags" value="freshmen">Freshmen</input> &nbsp;
+                <input type="checkbox" name="tags" value="international">International</input> &nbsp;
+                <input type="checkbox" name="tags" value="undocumented">Undocumented</input> &nbsp;
+                <input type="checkbox" name="tags" value="women">Women</input>
+            </td>
+        </tr>
+        <tr>
+            <th  class="searchhead4"><b>Focus area(s): </b></th>
+            <td>
+                <input type="checkbox" name="tags" value="academic">Academic</input> &nbsp;
+                <input type="checkbox" name="tags" value="admin">Administrative</input> &nbsp;
+                <input type="checkbox" name="tags" value="career">Career</input> &nbsp;
+                <input type="checkbox" name="tags" value="disability">Disability</input> &nbsp;
+                <input type="checkbox" name="tags" value="finlegal">Finance and Legal</input> &nbsp;
+                <input type="checkbox" name="tags" value="mentalhealth">Mental Health</input> &nbsp;
+                <input type="checkbox" name="tags" value="pcounseling">Peer Counseling</input> &nbsp;
+                <input type="checkbox" name="tags" value="peeredu">Peer Education</input> &nbsp;
+                <input type="checkbox" name="tags" value="religion">Religion</input> &nbsp;
+                <input type="checkbox" name="tags" value="sexhealth">Sexual Health</input> &nbsp;
+                <input type="checkbox" name="tags" value="studentlife">Student Life</input> &nbsp;
+                <input type="checkbox" name="tags" value="tech">Technology</input>
+            </td>
+        </tr>
+    </table>
+    <br>
+    <button class="btn btn-primary" type="submit">Search</button>
+</form>
+{% endblock %}

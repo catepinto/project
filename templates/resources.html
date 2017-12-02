@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+
+{% block main %}
+<table class="table table-striped" style="width=100%" id="t02">
+    <thead>
+        <tr>
+            <th class="head1">Name</th>
+            <th class="head2">Phone</th>
+            <th class="head3">Email</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            {% for resource in resources %}
+            <tr>
+                {% if resource.website %}
+                    <td class="row1"><a href="{{ resource.website }}">{{ resource.name }}</a></td>
+                {% else %}
+                    <td class="row1">None</td>
+                {% endif %}
+                <td class="row2">{{ resource.phone |phone }}</td>
+                {% if resource.email %}
+                    <td class="row3"><a href="mailto:{{ resource.email }}">{{ resource.email }}</a></td>
+                {% else %}
+                    <td class="row3">None</td>
+                {% endif %}
+            </tr>
+            {% endfor %}
+        </tr>
+    </tbody>
+</table>
+<p>
+    If you know of resources at Harvard that you feel should be listed here but are not, please email <a href="mailto:cpinto@college.harvard.edu">cpinto@college.harvard.edu</a>. Thanks!
+</p>
+{% endblock %}

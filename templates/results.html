@@ -1,0 +1,47 @@
+{% extends "layout.html" %}
+
+{% block main %}
+
+{% if percent_match == 100 %}
+    <p>The results below are a <b class="bold01">{{ percent_match }}%</b> match to your query!</p>
+{% elif 50 <= percent_match < 100 %}
+    <p>Sorry, we couldn't find an exact match to your query, but we found some matches that are a <b class="bold02">{{ percent_match }}%</b> match!</p>
+{% elif percent_match < 50 %}
+    <p>Sorry, we couldn't find an exact match to your query. The best matches we could find are only a <b class="bold03">{{ percent_match }}%</b> match. <a href="/search">Try another search</a> with fewer filters!</p>
+{% endif %}
+
+<table class="table table-striped" style="width=80%" id="t02">
+    <thead>
+        <tr>
+            <th class="head1">Name</th>
+            <th class="head2">Phone</th>
+            <th class="head3">Email</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            {% for resource in resources %}
+            <tr class="rows">
+                {% if resource.website %}
+                    <td><a href="{{ resource.website }}">{{ resource.name }}</a></td>
+                {% else %}
+                    <td>None</td>
+                {% endif %}
+                <td>{{ resource.phone |phone }}</td>
+                {% if resource.email %}
+                    <td><a href="mailto:{{ resource.email }}">{{ resource.email }}</a></td>
+                {% else %}
+                    <td>None</td>
+                {% endif %}
+            </tr>
+            {% endfor %}
+        </tr>
+    </tbody>
+</table>
+<br>
+<p><a href="/search" class="btn btn-primary">Search for something else</a></p>
+<br>
+<p>
+    If you know of resources at Harvard that you feel should be listed here but are not, please email <a href="mailto:cpinto@college.harvard.edu">cpinto@college.harvard.edu</a>. Thanks!
+</p>
+{% endblock %}

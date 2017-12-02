@@ -1,0 +1,172 @@
+/* SOURCE for all color codes was http://htmlcolorcodes.com/ */
+
+nav .navbar-brand
+{
+    /* size for brand */
+    font-size: xx-large;
+    font-weight: bold;
+}
+
+/* colors for brand */
+nav .navbar-brand .crimson
+{
+    color: #EB2E22;
+}
+nav .navbar-brand .teal
+{
+    color: #24CBCB;
+}
+nav .navbar-brand .purple
+{
+    color: #8E1FC2;
+}
+nav
+{
+    background-color: #F9EFFF;
+}
+
+
+main .form-control
+{
+    /* center form controls */
+    display: inline-block;
+
+    /* override Bootstrap's 100% width for form controls */
+    width: auto;
+}
+
+main
+{
+    /* scroll horizontally as needed */
+    overflow-x: auto;
+
+    /* center contents */
+    text-align: center;
+}
+
+main img
+{
+    /* constrain images on small screens */
+    max-width: 100%;
+}
+
+/* styles for search form table */
+#t01 th, td
+{
+    border-bottom: 1px solid black;
+    text-align: left;
+    padding: 8px;
+}
+#t01
+{
+    border: 3px solid black;
+}
+#t01 th
+{
+    vertical-align: top;
+}
+#t01 tr:nth-child(even) {background-color: #f2f2f2;}
+.searchhead1
+{
+    color: #EB2E22;
+}
+.searchhead2
+{
+    color: #24CBCB;
+}
+.searchhead3
+{
+    color: #EB2E22;
+}
+.searchhead4
+{
+    color: #24CBCB;
+}
+
+/* styles for resources and results tables */
+#t02
+{
+    border: 2px solid black;
+    border-collapse: collapse;
+    table-layout: fixed;
+    width: 100%;
+}
+#t02 th
+{
+    color: white;
+    text-align: left;
+    border: 2px solid black;
+}
+.row1
+{
+    width: 42%;
+}
+.row2
+{
+    width: 20%;
+}
+.row3
+{
+    width: 38%;
+}
+.head1
+{
+    background-color: #EB2E22;
+    width: 42%;
+}
+.head2
+{
+    background-color: #24CBCB;
+    width: 20%;
+}
+.head3
+{
+    background-color: #8E1FC2;
+    width: 38%;
+}
+
+.main-header
+{
+  text-align: center;
+}
+
+/* styles for home page table of images */
+#t03 th
+{
+    padding: 3px;
+}
+
+foot
+{
+    font-size: small;
+}
+
+
+b
+{
+    font-size: large;
+}
+
+.bold01
+{
+    color: green;
+}
+
+.bold02
+{
+    color: #f5b82e;
+}
+
+.bold03
+{
+    color: red;
+}
+
+.btn
+{
+    background-color: #FFFFA7;
+    border: 2px solid black;
+    font-size: 20px;
+    color: black;
+    padding: 8px 23px;
+}
